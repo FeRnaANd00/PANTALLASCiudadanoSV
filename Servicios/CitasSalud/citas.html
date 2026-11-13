@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>CiudadanoSV</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#f8f9ff", "on-primary-container": "#8dadff", "tertiary-fixed-dim": "#68d6e9", "on-primary": "#ffffff", "outline": "#747783", "on-primary-fixed-variant": "#144296", "on-secondary": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#434652", "inverse-on-surface": "#ebf1ff", "on-tertiary-container": "#4cbdcf", "surface-dim": "#d0daed", "secondary-fixed-dim": "#b2c5fd", "tertiary": "#003138", "primary-fixed": "#dae2ff", "inverse-primary": "#b1c5ff", "tertiary-container": "#004953", "surface-container-high": "#dfe9fc", "primary": "#002869", "background": "#f8f9ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#004f59", "inverse-surface": "#27313f", "surface": "#f8f9ff", "secondary": "#4a5d8e", "on-secondary-container": "#405383", "secondary-fixed": "#dae2ff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#324575", "tertiary-fixed": "#9defff", "surface-tint": "#345baf", "on-background": "#121c2a", "surface-container-highest": "#d9e3f6", "surface-container-low": "#eff4ff", "on-primary-fixed": "#001947", "on-tertiary-fixed": "#001f24", "on-surface": "#121c2a", "on-tertiary": "#ffffff", "surface-variant": "#d9e3f6", "primary-fixed-dim": "#b1c5ff", "on-secondary-fixed": "#001947", "surface-container": "#e6eeff", "error-container": "#ffdad6", "secondary-container": "#b5c8ff", "primary-container": "#0b3d91", "outline-variant": "#c4c6d3", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-md": "1rem", "margin": "2rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["Public Sans"], "body-md": ["Public Sans"], "headline-md": ["Public Sans"], "label-md": ["Public Sans"], "headline-xl": ["\"Source Serif 4\""], "body-sm": ["Public Sans"], "title-lg": ["Public Sans"], "body-lg": ["Public Sans"], "title-sm": ["Public Sans"], "headline-xl-mobile": ["\"Source Serif 4\""], "caption": ["Public Sans"], "display-lg-mobile": ["\"Source Serif 4\""], "display-lg": ["\"Source Serif 4\"" ] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}], "title-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}], "title-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-xl-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}], "caption": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}], "display-lg-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style id="service-page-refresh">
+  body { min-height: 100vh !important; background: #f8f9ff !important; overflow-x: hidden; }
+  header.fixed { position: sticky !important; top: 0; width: 100%; padding-top: 0 !important; }
+  header.fixed > div:nth-child(2) { height: auto !important; min-height: 4rem; padding: .65rem clamp(1rem, 3vw, 2rem) !important; }
+  main { width: 100%; max-width: 60rem; margin: 0 auto; padding-top: 1rem !important; padding-bottom: 1rem !important; }
+  main .bg-surface-container-lowest { border: 1px solid #e6ecf5; box-shadow: none !important; }
+  main .bg-surface-container-low { background-color: #f4f7fc !important; }
+  main .bg-surface-container-high, main .bg-surface-container { background-color: #eef3fb !important; }
+  main .gap-space-lg { gap: 1rem !important; }
+  .home-link { min-height: 2.75rem; white-space: nowrap; }
+  @media (max-width: 639px) { .home-link span.home-label { display: none; } }
+</style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe"><div class="w-full bg-[#c68a2e] text-[#071f4d] font-label-sm text-label-sm uppercase tracking-wider py-1 text-center shadow-[0_1px_8px_rgba(0,0,0,0.04)] select-none">Prototipo Académico - Datos Simulados</div><div class="h-20 bg-primary px-gutter-mobile flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-sm"><button aria-label="Abrir menú de navegación" class="w-11 h-11 flex items-center justify-center text-on-primary hover:bg-primary-container rounded-lg" type="button"><span class="material-symbols-outlined">menu</span></button><div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-on-primary"><span class="material-symbols-outlined text-xl">account_balance</span></div><div class="flex flex-col ml-space-xs"><span class="font-title-sm text-title-sm text-on-primary font-bold leading-tight tracking-tight">CiudadanoSV</span><span class="font-caption text-caption text-primary-fixed opacity-80 leading-none">Catálogo De Servicios</span></div></div><div class="flex items-center gap-space-xs"><a aria-label="Ver notificaciones" class="relative w-11 h-11 flex items-center justify-center text-on-primary hover:bg-primary-container rounded-lg" data-path="notificaciones" href="#"><span class="material-symbols-outlined">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span></a><a aria-label="Volver al inicio" class="home-link flex items-center justify-center gap-1 rounded-lg border border-white/30 px-2 text-sm font-semibold text-on-primary hover:bg-primary-container" href="../../Index.html"><span class="material-symbols-outlined">home</span><span class="home-label">Volver al inicio</span></a></div></div></header><main class="flex flex-col relative w-full pt-20 pb-20 bg-surface flex-grow"><div class="flex flex-col w-full">
+<!-- Interactive Tab Switcher -->
+<div class="px-gutter-mobile pt-space-md pb-space-sm bg-surface">
+<div class="bg-surface-container-high p-space-xs rounded-xl flex items-center shadow-sm">
+<button class="flex-1 py-2.5 px-space-sm text-center font-label-md text-label-md rounded-lg transition-all duration-200 bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-space-xs" id="tab-mis-citas" onclick="switchTab('mis-citas')">
+<span class="material-symbols-outlined text-base">event_upcoming</span>
+<span>Mis citas (2)</span>
+</button>
+<button class="flex-1 py-2.5 px-space-sm text-center font-label-md text-label-md rounded-lg transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-space-xs" id="tab-agendar" onclick="switchTab('agendar')">
+<span class="material-symbols-outlined text-base">calendar_add_on</span>
+<span>Agendar nueva cita</span>
+</button>
+</div>
+</div>
+<!-- Tab Content 1: Mis Citas -->
+<section class="flex flex-col gap-space-lg px-gutter-mobile py-space-sm transition-opacity duration-300" id="content-mis-citas">
+<!-- Hero/Featured Upcoming Appointment -->
+<article class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md">
+<!-- Card Header: Status & Category -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Salud Pública • MINSAL</span>
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold leading-snug">Consulta Odontología General</h2>
+</div>
+<!-- Status Badge: Confirmada (Turquesa #159AAC) -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#159aac]/10 text-[#006877] font-label-sm text-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-[#159aac]"></span>
+          Cita Confirmada
+        </span>
+</div>
+<!-- Quick Details Ribbon -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-xl shrink-0" style="font-variation-settings: 'FILL' 1;">calendar_clock</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary-container">Lunes 18 de Noviembre 2024</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10:30 AM (Turno Matutino)</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm text-on-surface pt-1">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0">location_on</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Unidad de Salud San Salvador Centro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Calle Arce y 21 Av. Norte, San Salvador</span>
+</div>
+</div>
+</div>
+<!-- Confirmation Code & Simulated QR Pass -->
+<div class="bg-surface-container-lowest rounded-lg p-space-md flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-caption text-caption text-on-surface-variant uppercase">Pase Digital de Acceso</span>
+<span class="font-title-sm text-title-sm text-primary-container font-mono font-bold tracking-wider">CITA-SAL-88219</span>
+<span class="font-caption text-caption text-secondary">Válido en kiosco de autoservicio</span>
+</div>
+<!-- Stylized Micro QR SVG -->
+<div class="p-2 bg-surface-container rounded-lg shrink-0 flex items-center justify-center">
+<svg class="w-14 h-14 text-primary" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm13-2h3v3h-3v-3zm0 5h3v3h-3v-3zm-3-5h2v2h-2v-2zm0 3h2v4h-2v-4zm-3-3h2v2h-2v-2zm5 5h2v2h-2v-2zM5 5h2v2H5V5zm12 0h2v2h-2V5zM5 17h2v2H5v-2z"></path>
+</svg>
+</div>
+</div>
+<!-- Guidelines Notice -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5">info</span>
+<p class="font-caption text-caption text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">Requisitos del día:</strong> Presentarse 15 minutos antes, portar Documento Único de Identidad (DUI) físico o digital en esta app y mostrar este comprobante en ventanilla.
+        </p>
+</div>
+<!-- Visual Card Context Image -->
+<div class="relative w-full h-28 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Modern Salvadoran public medical center reception, neat minimalist clinic hall with friendly medical staff and blue civic signage in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEmgDoqwwpPPJZ49dyexQ5sTIBda3a7jd4mIkn7jBwECaYNALhfcW471M0f_7seLT9TajcnDdc54HkBsFLXoRCsPEEDqB5j_c0rqPuDRkm2zsSDU_xJr_TscmdO8TJ3alZ5257U2IH--RlCepJzDR6zPO7Nf6L1UdUE1MKnBcRCa4GFZUEIrE-7ZjZfk3SUAR2vj8kh_1MtT_UHWvpt9qdRShy3QgUNv7lSFC8mmA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent flex items-end p-2.5">
+<span class="font-caption text-caption text-on-primary">Módulo Odontológico B • Planta Baja</span>
+</div>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md rounded-lg shadow-sm flex items-center justify-center gap-space-xs active:bg-primary-container transition-colors" onclick="openReprogramModal()" type="button">
+<span class="material-symbols-outlined text-lg">edit_calendar</span>
+<span>Reprogramar cita</span>
+</button>
+<button class="w-full py-2.5 text-center font-label-md text-label-md text-error hover:bg-error-container/20 rounded-lg transition-colors flex items-center justify-center gap-space-xs" onclick="confirmCancelNotice()" type="button">
+<span class="material-symbols-outlined text-lg">cancel</span>
+<span>Cancelar cita</span>
+</button>
+</div>
+</article>
+<!-- Secondary Appointment Card: RNPN / DUI -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Identidad • RNPN</span>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold leading-tight">Toma Biométrica - Renovación DUI</h3>
+</div>
+<!-- Status Badge: Pendiente (Dorado Institucional) -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#c68a2e]/15 text-[#845600] font-label-sm text-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-[#c68a2e]"></span>
+          En Revisión
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-lg">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">Viernes 22 de Noviembre 2024 - 09:00 AM</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg">storefront</span>
+<span class="font-body-sm text-body-sm">Duicentro Galerías Escalón, Nivel 2</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-caption text-caption text-on-surface-variant">Solicitud #DUI-2024-9411</span>
+<button class="px-space-md py-2 text-primary font-label-md text-label-md bg-secondary-container/30 hover:bg-secondary-container/60 rounded-lg transition-colors flex items-center gap-1" onclick="switchTab('agendar')" type="button">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Modificar horario</span>
+</button>
+</div>
+</article>
+<!-- Visual Civic Tips Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">verified_user</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Recordatorio Ciudadano</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tus citas reservadas sincronizan automáticamente con tu pasaporte digital de servicios en CiudadanoSV.</p>
+</div>
+</div>
+</section>
+<!-- Tab Content 2: Agendar Nueva Cita -->
+<section class="hidden flex-col gap-space-lg px-gutter-mobile py-space-sm transition-opacity duration-300" id="content-agendar">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Reserva de Atención Presencial</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Selecciona institución, fecha y franja horaria disponible.</p>
+</div>
+<!-- Step Form Fields -->
+<div class="flex flex-col gap-space-md">
+<!-- 1. Servicio / Institución -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="select-institucion">
+            1. Institución o Sector <span class="text-error">*</span>
+</label>
+<div class="relative w-full">
+<select class="w-full h-11 px-3 pr-10 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" id="select-institucion">
+<option selected="" value="minsal">Salud Pública / MINSAL</option>
+<option value="rnpn">Registro Nacional de Personas Naturales (RNPN)</option>
+<option value="vmt">Viceministerio de Transporte (VMT)</option>
+<option value="hacienda">Ministerio de Hacienda</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none text-xl">expand_more</span>
+</div>
+</div>
+<!-- 2. Trámite Específico -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="select-tramite">
+            2. Trámite Requerido <span class="text-error">*</span>
+</label>
+<div class="relative w-full">
+<select class="w-full h-11 px-3 pr-10 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" id="select-tramite">
+<option selected="" value="odontologia">Cita odontológica o medicina general</option>
+<option value="pediatria">Atención pediátrica preventiva</option>
+<option value="laboratorio">Toma de muestras clínicas</option>
+<option value="vacunacion">Esquema nacional de vacunación</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none text-xl">expand_more</span>
+</div>
+</div>
+<!-- 3. Departamento y Sede -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold" for="select-sede">
+            3. Departamento y Sede <span class="text-error">*</span>
+</label>
+<div class="relative w-full">
+<select class="w-full h-11 px-3 pr-10 bg-surface-container-low text-on-surface rounded-lg font-body-md text-body-md appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary shadow-sm" id="select-sede">
+<option selected="" value="ss-arce">San Salvador Centro - Unidad de Salud Arce</option>
+<option value="ss-barrios">San Salvador Centro - Clínica Barrios</option>
+<option value="so-soyapango">San Salvador Este - U.S. Soyapango</option>
+<option value="ll-tecla">La Libertad Sur - U.S. Santa Tecla</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none text-xl">expand_more</span>
+</div>
+</div>
+<!-- Location Context Micro Map -->
+<div class="w-full h-24 bg-surface-container-high rounded-lg relative overflow-hidden flex items-center justify-center" data-location="Calle Arce, San Salvador, El Salvador" style="">
+<div class="absolute inset-0 bg-cover bg-center opacity-70" data-alt="Satellite civic street map view of downtown San Salvador El Salvador highlighting Calle Arce public sector avenue" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3au3t_c_FuhoRRL7PdI_jqpEEBz5kKyag9qYx4XQTaJsEkSDFu77i79hItFGrKbsZpAG_SIX4HeBibku1NIvwlE2A4bDs5YTpdzl6NT6Z3c6LTOy7PHPXPwfBtkjb8i9irKK05yGJn_hDJAsafpDapamstlN0r9PEUe8KGeKr0mw2v_vrJD9aWJ7eZD7hLjPNsnEDB9JsOYetqJ3qRuEmL2x2H_rcfzcncsDk8lA')"></div>
+<div class="relative z-10 bg-surface/90 px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5 text-primary-container">
+<span class="material-symbols-outlined text-sm">near_me</span>
+<span class="font-caption text-caption font-bold">Calle Arce y 21 Av. Norte</span>
+</div>
+</div>
+<!-- 4. Interactive Simplified Calendar (Noviembre 2024) -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between pb-1">
+<label class="font-label-md text-label-md text-on-surface font-bold">4. Seleccionar Día (Noviembre 2024)</label>
+<span class="font-caption text-caption text-primary font-bold">2 cupos disponibles</span>
+</div>
+<!-- Calendar Container -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs">
+<!-- Month Header Bar -->
+<div class="flex items-center justify-between px-space-xs py-1">
+<button aria-label="Mes anterior" class="w-7 h-7 flex items-center justify-center text-secondary rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">chevron_left</span>
+</button>
+<span class="font-label-md text-label-md text-on-surface font-bold">Noviembre 2024</span>
+<button aria-label="Mes siguiente" class="w-7 h-7 flex items-center justify-center text-secondary rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+<!-- Day Labels -->
+<div class="grid grid-cols-7 gap-1 text-center font-caption text-caption text-on-surface-variant font-bold pb-1">
+<span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+</div>
+<!-- Calendar Days Grid (Interactive) -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm" id="calendar-grid">
+<!-- Empty offset slots for Nov 1 (starts on Friday) -->
+<span class="py-2 opacity-25 text-on-surface">28</span>
+<span class="py-2 opacity-25 text-on-surface">29</span>
+<span class="py-2 opacity-25 text-on-surface">30</span>
+<span class="py-2 opacity-25 text-on-surface">31</span>
+<!-- Available / Regular dates -->
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 1)" type="button">1</button>
+<span class="py-2 text-on-surface-variant opacity-40">2</span>
+<span class="py-2 text-on-surface-variant opacity-40">3</span>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 4)" type="button">4</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 5)" type="button">5</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 6)" type="button">6</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 7)" type="button">7</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 8)" type="button">8</button>
+<span class="py-2 text-on-surface-variant opacity-40">9</span>
+<span class="py-2 text-on-surface-variant opacity-40">10</span>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 11)" type="button">11</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 12)" type="button">12</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 13)" type="button">13</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 14)" type="button">14</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 15)" type="button">15</button>
+<span class="py-2 text-on-surface-variant opacity-40">16</span>
+<span class="py-2 text-on-surface-variant opacity-40">17</span>
+<!-- Selected Active Day: 18 -->
+<button class="py-2 rounded-lg bg-primary-container text-on-primary font-bold shadow-sm" id="default-selected-date" onclick="selectDate(this, 18)" type="button">18</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 19)" type="button">19</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 20)" type="button">20</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 21)" type="button">21</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 22)" type="button">22</button>
+<span class="py-2 text-on-surface-variant opacity-40">23</span>
+<span class="py-2 text-on-surface-variant opacity-40">24</span>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 25)" type="button">25</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 26)" type="button">26</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 27)" type="button">27</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 28)" type="button">28</button>
+<button class="py-2 rounded-lg text-on-surface hover:bg-surface-container" onclick="selectDate(this, 29)" type="button">29</button>
+<span class="py-2 text-on-surface-variant opacity-40">30</span>
+<span class="py-2 opacity-25 text-on-surface">1</span>
+</div>
+</div>
+</div>
+<!-- 5. Horarios Disponibles (Pill Buttons) -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-bold">
+            5. Horario para el día seleccionado <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-2 gap-space-xs" id="slot-container">
+<button class="slot-pill py-2.5 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="selectSlot(this)" type="button">
+              08:30 AM
+            </button>
+<button class="slot-pill py-2.5 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="selectSlot(this)" type="button">
+              09:15 AM
+            </button>
+<button class="slot-pill py-2.5 px-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-colors" onclick="selectSlot(this)" type="button">
+              10:30 AM ✓
+            </button>
+<button class="slot-pill py-2.5 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="selectSlot(this)" type="button">
+              02:00 PM
+            </button>
+<button class="slot-pill col-span-2 py-2.5 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" onclick="selectSlot(this)" type="button">
+              03:15 PM
+            </button>
+</div>
+</div>
+<!-- Primary Submit Button -->
+<div class="pt-space-md">
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md rounded-lg shadow-md flex items-center justify-center gap-space-xs transition-all active:scale-[0.99]" onclick="confirmBooking()" type="button">
+<span class="material-symbols-outlined text-xl">event_available</span>
+<span>Confirmar y Reservar Cita</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Feedback Toast (Simulated Booking) -->
+<div class="hidden fixed bottom-20 left-4 right-4 z-40 bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-xl shadow-lg flex items-center justify-between gap-space-sm transition-all duration-300" id="booking-toast">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#159aac]">check_circle</span>
+<span class="font-body-sm text-body-sm">¡Cita agendada con éxito para el 18 de Noviembre!</span>
+</div>
+<button class="text-inverse-on-surface opacity-80 hover:opacity-100 font-label-sm text-label-sm uppercase" onclick="dismissToast()" type="button">Cerrar</button>
+</div>
+<!-- Bottom Academic Disclaimer Notice -->
+<footer class="mt-space-lg px-gutter-mobile pb-space-lg">
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center gap-space-xs text-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-[#c68a2e]">school</span>
+<span class="font-caption text-caption">
+        Prototipo Académico - Todos los horarios y citas son simulaciones educativas.
+      </span>
+</div>
+</footer>
+</div>
+<!-- Inline Interaction Behavior -->
+<script>
+  function switchTab(target) {
+    const tabCitas = document.getElementById('tab-mis-citas');
+    const tabAgendar = document.getElementById('tab-agendar');
+    const contentCitas = document.getElementById('content-mis-citas');
+    const contentAgendar = document.getElementById('content-agendar');
+
+    if (target === 'mis-citas') {
+      tabCitas.className = "flex-1 py-2.5 px-space-sm text-center font-label-md text-label-md rounded-lg transition-all duration-200 bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-space-xs";
+      tabAgendar.className = "flex-1 py-2.5 px-space-sm text-center font-label-md text-label-md rounded-lg transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-space-xs";
+      contentCitas.classList.remove('hidden');
+      contentAgendar.classList.add('hidden');
+    } else {
+      tabAgendar.className = "flex-1 py-2.5 px-space-sm text-center font-label-md text-label-md rounded-lg transition-all duration-200 bg-primary-container text-on-primary shadow-sm flex items-center justify-center gap-space-xs";
+      tabCitas.className = "flex-1 py-2.5 px-space-sm text-center font-label-md text-label-md rounded-lg transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-space-xs";
+      contentAgendar.classList.remove('hidden');
+      contentCitas.classList.add('hidden');
+    }
+  }
+
+  function selectDate(btn, dayNum) {
+    const grid = document.getElementById('calendar-grid');
+    const allButtons = grid.querySelectorAll('button');
+    allButtons.forEach(b => {
+      b.className = "py-2 rounded-lg text-on-surface hover:bg-surface-container";
+    });
+    btn.className = "py-2 rounded-lg bg-primary-container text-on-primary font-bold shadow-sm";
+  }
+
+  function selectSlot(btn) {
+    const container = document.getElementById('slot-container');
+    const allPills = container.querySelectorAll('.slot-pill');
+    allPills.forEach(p => {
+      p.className = "slot-pill py-2.5 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors";
+      if (p.textContent.includes('✓')) {
+        p.textContent = p.textContent.replace(' ✓', '');
+      }
+    });
+    btn.className = "slot-pill py-2.5 px-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm transition-colors";
+    btn.textContent = btn.textContent.trim() + " ✓";
+  }
+
+  function confirmBooking() {
+    const toast = document.getElementById('booking-toast');
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      switchTab('mis-citas');
+    }, 1200);
+  }
+
+  function dismissToast() {
+    document.getElementById('booking-toast').classList.add('hidden');
+  }
+
+  function openReprogramModal() {
+    switchTab('agendar');
+  }
+
+  function confirmCancelNotice() {
+    if (confirm("¿Deseas cancelar tu cita para Odontología General? Esta acción liberará tu turno.")) {
+      alert("Cita cancelada con fines del prototipo simulado.");
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,31,77,0.08)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-primary transition-colors" data-path="inicio" href="#"><span class="material-symbols-outlined text-xl mb-0.5">home</span><span class="font-caption text-caption">Inicio</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-primary transition-colors" data-path="catalogo-de-servicios" href="#"><span class="material-symbols-outlined text-xl mb-0.5">grid_view</span><span class="font-caption text-caption">Servicios</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-primary transition-colors" data-path="mis-tramites" href="#"><span class="material-symbols-outlined text-xl mb-0.5">folder_shared</span><span class="font-caption text-caption">Solicitudes</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-primary transition-colors" data-path="agenda-de-citas" href="#"><span class="material-symbols-outlined text-xl mb-0.5">calendar_month</span><span class="font-caption text-caption">Citas</span></a><a class="flex-1 flex flex-col items-center justify-center h-full text-on-surface-variant hover:text-primary transition-colors" data-path="perfil-ciudadano" href="#"><span class="material-symbols-outlined text-xl mb-0.5">account_circle</span><span class="font-caption text-caption">Perfil</span></a></div></nav></body></html>

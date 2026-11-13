@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="admin_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100..900&family=Source+Serif+4:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-container": "#0b3d91", "error-container": "#ffdad6", "surface-variant": "#d9e3f6", "surface-bright": "#f8f9ff", "background": "#f8f9ff", "secondary-container": "#b5c8ff", "on-secondary": "#ffffff", "tertiary-container": "#004953", "inverse-on-surface": "#ebf1ff", "secondary": "#4a5d8e", "tertiary-fixed": "#9defff", "surface-dim": "#d0daed", "on-error": "#ffffff", "on-surface": "#121c2a", "on-error-container": "#93000a", "primary-fixed": "#dae2ff", "outline": "#747783", "surface-tint": "#345baf", "on-tertiary": "#ffffff", "inverse-primary": "#b1c5ff", "on-secondary-container": "#405383", "surface-container-low": "#eff4ff", "secondary-fixed": "#dae2ff", "on-primary-container": "#8dadff", "inverse-surface": "#27313f", "on-secondary-fixed": "#001947", "surface": "#f8f9ff", "tertiary": "#003138", "on-secondary-fixed-variant": "#324575", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#004f59", "surface-container-lowest": "#ffffff", "on-surface-variant": "#434652", "surface-container-high": "#dfe9fc", "on-background": "#121c2a", "on-primary-fixed": "#001947", "tertiary-fixed-dim": "#68d6e9", "surface-container": "#e6eeff", "primary-fixed-dim": "#b1c5ff", "secondary-fixed-dim": "#b2c5fd", "on-primary-fixed-variant": "#144296", "outline-variant": "#c4c6d3", "on-primary": "#ffffff", "surface-container-highest": "#d9e3f6", "on-tertiary-container": "#4cbdcf", "primary": "#002869", "on-tertiary-fixed": "#001f24" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "body-md": ["Public Sans"], "label-sm": ["Public Sans"], "caption": ["Public Sans"], "display-lg": ["\"Source Serif 4\""], "headline-md": ["Public Sans"], "label-md": ["Public Sans"], "body-sm": ["Public Sans"], "body-lg": ["Public Sans"], "headline-xl": ["\"Source Serif 4\""], "title-lg": ["Public Sans"], "headline-xl-mobile": ["\"Source Serif 4\""], "display-lg-mobile": ["\"Source Serif 4\""], "title-sm": ["Public Sans"] }, "fontSize": { "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "caption": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-xl-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "display-lg-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "title-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style>
+    html, body { width: 100%; min-height: 100%; overflow-x: hidden; }
+    body { min-height: 100vh; background: #f8f9ff; }
+    body > header { position: sticky !important; top: 0; width: 100%; background: #002869; box-shadow: 0 2px 10px rgba(18, 28, 42, .08); }
+    body > header > aside { min-height: 28px; height: auto; padding: 6px 16px; background: #eff4ff !important; }
+    body > header > aside p { color: #434652 !important; font-size: 11px; letter-spacing: .04em; }
+    body > header > div { box-sizing: border-box; width: 100%; max-width: 1280px; height: 72px; margin: 0 auto; padding: 0 24px; }
+    body > main { box-sizing: border-box; width: 100%; max-width: 1280px; margin: 0 auto; padding: 32px 24px 96px !important; }
+    body > main > div:first-child { width: 100%; max-width: none; gap: 24px; padding-bottom: 24px; }
+    body > main h1 { color: #002869 !important; font-size: clamp(1.75rem, 3vw, 2rem) !important; line-height: 1.2 !important; letter-spacing: -.025em !important; }
+    body > main h2 { line-height: 1.3; }
+    body > main p { line-height: 1.55 !important; }
+    body > main section[class*='bg-surface-container-lowest'],
+    body > main article[class*='bg-surface-container-lowest'] { border: 1px solid #e1e7f0; box-shadow: 0 2px 8px rgba(18, 28, 42, .035); }
+    body > main article { border: 1px solid #e1e7f0; }
+    body > main input, body > main select { min-height: 42px; }
+    body > nav { background: #fff !important; border-top: 1px solid #e1e7f0; box-shadow: 0 -2px 10px rgba(18, 28, 42, .05) !important; backdrop-filter: none; }
+    body > nav a { color: #434652 !important; }
+    body > nav a[aria-current='page'] { color: #002869; }
+    .home-link { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; padding: 0 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 8px; color: #fff; font-size: 13px; font-weight: 600; text-decoration: none; transition: background-color .18s ease, border-color .18s ease; }
+    .home-link:hover, .home-link:focus-visible { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.7); }
+    .home-link:focus-visible { outline: 2px solid #b5c8ff; outline-offset: 2px; }
+    @media (min-width: 900px) {
+      body > main { padding: 40px 32px 104px !important; }
+      body > main > div:first-child { gap: 28px; }
+    }
+    @media (max-width: 420px) {
+      body > header > div { padding: 0 12px; gap: 4px; }
+      body > header > div > div:first-child { gap: 6px; }
+      body > header > div > div:last-child { gap: 2px; }
+      body > header > div > div:last-child > button { width: 36px; }
+      .home-link { min-height: 36px; padding: 0 8px; font-size: 12px; }
+      body > main { padding-right: 16px !important; padding-left: 16px !important; }
+    }
+</style>
+</head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-primary shadow-[0_12px_32px_-4px_rgba(7,31,77,0.15)]"><aside class="h-9 bg-[#C68A2E] flex items-center justify-center px-gutter-mobile"><p class="font-label-sm text-label-sm text-primary font-bold tracking-wider text-center truncate uppercase">Prototipo Académico - Datos Simulados | Portal Administrativo</p></aside><div class="h-20 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-11 h-11 rounded-lg bg-surface-container-lowest/10 flex items-center justify-center text-on-primary shrink-0"><span class="material-symbols-outlined text-[24px]">account_balance</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm text-on-primary font-bold tracking-tight truncate">CiudadanoSV Admin</span><span class="px-space-xs py-0.5 rounded bg-tertiary-fixed-dim/20 text-tertiary-fixed font-caption text-caption uppercase tracking-wider shrink-0 font-semibold">Admin</span></div><span class="font-caption text-caption text-primary-fixed-dim truncate">Gestión Pública Digital</span></div></div><div class="flex items-center gap-space-xs shrink-0"><a class="home-link" href="../Index.html">Inicio</a><button aria-label="Alertas operativas" class="w-11 h-11 flex items-center justify-center relative text-on-primary hover:text-tertiary-fixed transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-primary"></span></button><div class="flex items-center gap-space-xs pl-space-xs" title="Lic. Douglas Morales"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-[116px] pb-[88px] px-gutter-mobile bg-background"><div class="flex flex-col w-full pb-space-lg gap-space-md">
+<!-- Encabezado de Gestión Operativa -->
+<section class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-1.5 px-space-sm py-1 bg-surface-container rounded-full shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#159AAC] animate-pulse"></span>
+<span class="font-caption text-caption text-on-surface-variant font-semibold">Datos actualizados: Hoy, 10:45 AM</span>
+</div>
+<div class="flex items-center gap-1 text-[#0B3D91] bg-surface-container-low px-space-xs py-0.5 rounded">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-caption text-caption font-bold tracking-wider uppercase">SV-ADMIN-NODE-03</span>
+</div>
+</div>
+<div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary font-bold tracking-tight">Panel de Control y Analítica</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitoreo de rendimiento administrativo, flujos de atención ciudadana y solvencia digital.</p>
+</div>
+<!-- Selector de Período con Micro-interacción -->
+<div class="flex items-center bg-surface-container-high p-1 rounded-xl gap-1 mt-space-xs shadow-sm" id="period-selector">
+<button class="flex-1 py-1.5 rounded-lg text-center font-label-sm text-label-sm font-semibold transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm" onclick="selectPeriod(this)" type="button">Hoy</button>
+<button class="flex-1 py-1.5 rounded-lg text-center font-label-sm text-label-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface" onclick="selectPeriod(this)" type="button">Esta semana</button>
+<button class="flex-1 py-1.5 rounded-lg text-center font-label-sm text-label-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface" onclick="selectPeriod(this)" type="button">Mes en curso</button>
+<button class="flex-1 py-1.5 rounded-lg text-center font-label-sm text-label-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface" onclick="selectPeriod(this)" type="button">2024</button>
+</div>
+</section>
+<!-- Tarjetas de Indicadores Clave (Bento Grid 2x2 Móvil) -->
+<section class="grid grid-cols-2 gap-space-sm">
+<!-- KPI 1: Solicitudes Totales -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-[#0B3D91]">
+<span class="material-symbols-outlined text-[20px]">folder_shared</span>
+</div>
+<span class="px-1.5 py-0.5 rounded font-caption text-caption font-bold bg-[#EAF5EE] text-[#107C41] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">trending_up</span>
+          +12.4%
+        </span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight block">1,428</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium block">Total Solicitudes</span>
+</div>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#0B3D91]"></span>
+<span class="font-caption text-caption text-on-surface-variant">vs. mes anterior</span>
+</div>
+</div>
+<!-- KPI 2: Pendientes de Revisión (Alerta Dorada) -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-[#FDF8EE] flex items-center justify-center text-[#C68A2E]">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+<span class="px-1.5 py-0.5 rounded font-caption text-caption font-bold bg-[#FDF8EE] text-[#C68A2E] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">priority_high</span>
+          Crítico
+        </span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight block">342</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium block">Pendientes</span>
+</div>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#C68A2E]"></span>
+<span class="font-caption text-caption text-[#C68A2E] font-semibold truncate">Acción inmediata</span>
+</div>
+</div>
+<!-- KPI 3: Citas de Hoy -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-[#159AAC]">
+<span class="material-symbols-outlined text-[20px]">event_available</span>
+</div>
+<span class="px-1.5 py-0.5 rounded font-caption text-caption font-bold bg-surface-container text-[#159AAC]">
+          Hoy
+        </span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight block">86</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium block">Citas Agendadas</span>
+</div>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#159AAC]"></span>
+<span class="font-caption text-caption text-on-surface-variant truncate">94% asistencia est.</span>
+</div>
+</div>
+<!-- KPI 4: Ciudadanos Registrados -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<span class="px-1.5 py-0.5 rounded font-caption text-caption font-bold bg-[#EAF5EE] text-[#107C41] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">add</span>
+          520
+        </span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight block">14,890</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium block">Expedientes SV</span>
+</div>
+<div class="mt-space-xs pt-space-xs bg-surface-container-lowest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#107C41]"></span>
+<span class="font-caption text-caption text-on-surface-variant truncate">+520 este mes</span>
+</div>
+</div>
+</section>
+<!-- Gráfico de Solicitudes por Servicio Institucional -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-[#0B3D91]">
+<span class="material-symbols-outlined text-[18px]">bar_chart</span>
+</div>
+<div>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Demanda por Ministerio</h2>
+<p class="font-caption text-caption text-on-surface-variant">Distribución del volumen tramitado</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-[#0B3D91] font-bold">1,428 Totales</span>
+</div>
+<!-- Lista de Barras de Distribución Horizontal -->
+<div class="flex flex-col gap-space-md">
+<!-- Salud y Bienestar (MINSAL) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#0B3D91] shrink-0"></span>
+<span class="font-medium text-on-surface truncate">Salud y Bienestar (MINSAL)</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">412 <span class="text-on-surface-variant font-normal">(29%)</span></span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-[#0B3D91] rounded-full transition-all duration-700" style="width: 29%"></div>
+</div>
+</div>
+<!-- Identidad y DUI (RNPN) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#159AAC] shrink-0"></span>
+<span class="font-medium text-on-surface truncate">Identidad y DUI (RNPN)</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">385 <span class="text-on-surface-variant font-normal">(27%)</span></span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-[#159AAC] rounded-full transition-all duration-700" style="width: 27%"></div>
+</div>
+</div>
+<!-- Transporte y Movilidad (VMT) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#071F4D] shrink-0"></span>
+<span class="font-medium text-on-surface truncate">Transporte y Tránsito (VMT)</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">294 <span class="text-on-surface-variant font-normal">(21%)</span></span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-[#071F4D] rounded-full transition-all duration-700" style="width: 21%"></div>
+</div>
+</div>
+<!-- Servicios Municipales -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#C68A2E] shrink-0"></span>
+<span class="font-medium text-on-surface truncate">Servicios Municipales (Alcaldías)</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">215 <span class="text-on-surface-variant font-normal">(15%)</span></span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-[#C68A2E] rounded-full transition-all duration-700" style="width: 15%"></div>
+</div>
+</div>
+<!-- Educación y Ciencia (MINED) -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#107C41] shrink-0"></span>
+<span class="font-medium text-on-surface truncate">Educación y Becas (MINED)</span>
+</div>
+<span class="font-semibold text-on-surface shrink-0">122 <span class="text-on-surface-variant font-normal">(8%)</span></span>
+</div>
+<div class="w-full h-2.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-[#107C41] rounded-full transition-all duration-700" style="width: 8%"></div>
+</div>
+</div>
+</div>
+<!-- Mini Nota de Rendimiento -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<span class="font-caption text-caption text-on-surface-variant font-medium">Mayor demanda focalizada en:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">MINSAL & RNPN (56%)</span>
+</div>
+</section>
+<!-- Desglose Gráfico de Solicitudes por Estado -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">donut_large</span>
+</div>
+<div>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Estado del Flujo Operativo</h2>
+<p class="font-caption text-caption text-on-surface-variant">Trazabilidad en tiempo real</p>
+</div>
+</div>
+<button aria-label="Filtrar vista" class="text-[#0B3D91] hover:opacity-80 transition-opacity" title="Filtrar vista">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+<!-- Visual Ring & Resumen Centralizado -->
+<div class="flex items-center justify-center py-space-xs">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<!-- Gráfico de Dona en SVG Proporcional (Perímetro ~ 377px) -->
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 140 140">
+<!-- Fondo base -->
+<circle cx="70" cy="70" fill="transparent" r="54" stroke="#E6EEFF" stroke-width="14"></circle>
+<!-- Aprobadas / Emitidas: 48% (181px) -->
+<circle cx="70" cy="70" fill="transparent" r="54" stroke="#107C41" stroke-dasharray="181 377" stroke-dashoffset="0" stroke-width="14"></circle>
+<!-- En Revisión: 24% (90.5px) -->
+<circle cx="70" cy="70" fill="transparent" r="54" stroke="#C68A2E" stroke-dasharray="90.5 377" stroke-dashoffset="-181" stroke-width="14"></circle>
+<!-- Cita Programada: 14% (52.8px) -->
+<circle cx="70" cy="70" fill="transparent" r="54" stroke="#159AAC" stroke-dasharray="52.8 377" stroke-dashoffset="-271.5" stroke-width="14"></circle>
+<!-- Recibidas: 10% (37.7px) -->
+<circle cx="70" cy="70" fill="transparent" r="54" stroke="#0B3D91" stroke-dasharray="37.7 377" stroke-dashoffset="-324.3" stroke-width="14"></circle>
+<!-- Rechazadas: 4% (15px) -->
+<circle cx="70" cy="70" fill="transparent" r="54" stroke="#C5221F" stroke-dasharray="15 377" stroke-dashoffset="-362" stroke-width="14"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-headline-md text-headline-md font-bold text-primary leading-none">1,428</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium mt-1">Expedientes</span>
+</div>
+</div>
+</div>
+<!-- Leyenda Semántica con Chips Institucionales -->
+<div class="grid grid-cols-1 gap-2 pt-space-xs">
+<!-- Aprobadas / Emitidas -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-[#EAF5EE]">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#107C41]"></span>
+<span class="font-label-sm text-label-sm font-semibold text-[#107C41]">Aprobadas / Emitidas</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-[#107C41]">685</span>
+<span class="font-caption text-caption text-[#107C41]/80 font-medium">48%</span>
+</div>
+</div>
+<!-- En Revisión -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-[#FDF8EE]">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#C68A2E]"></span>
+<span class="font-label-sm text-label-sm font-semibold text-[#C68A2E]">En Revisión Técnica</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-[#C68A2E]">342</span>
+<span class="font-caption text-caption text-[#C68A2E]/80 font-medium">24%</span>
+</div>
+</div>
+<!-- Cita Programada -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#159AAC]"></span>
+<span class="font-label-sm text-label-sm font-semibold text-[#159AAC]">Cita Programada</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-[#159AAC]">198</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">14%</span>
+</div>
+</div>
+<!-- Recibidas Iniciales -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#0B3D91]"></span>
+<span class="font-label-sm text-label-sm font-semibold text-[#0B3D91]">Recibidas en Espera</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-[#0B3D91]">145</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">10%</span>
+</div>
+</div>
+<!-- Rechazadas / Observadas -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-[#FDF2F2]">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-[#C5221F]"></span>
+<span class="font-label-sm text-label-sm font-semibold text-[#C5221F]">Rechazadas / Observadas</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-[#C5221F]">58</span>
+<span class="font-caption text-caption text-[#C5221F]/80 font-medium">4%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección: Alertas Operativas y Cuellos de Botella -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#C68A2E] text-[20px]">warning</span>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Cuellos de Botella y Alertas</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full font-caption text-caption font-bold bg-[#FDF8EE] text-[#C68A2E]">2 Activas</span>
+</div>
+<!-- Alerta 1: Retraso en Duicentro Galerías -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-[#FDF8EE] flex items-center justify-center text-[#C68A2E] shrink-0">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-[#C68A2E] uppercase tracking-wider">Demora en Asignación</span>
+<span class="font-caption text-caption text-on-surface-variant">Hace 14 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold mt-0.5">18 solicitudes > 48 horas sin asignación técnica</p>
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Sede: <span class="font-medium text-on-surface">Duicentro San Salvador - C.C. Galerías</span>. Se recomienda redistribuir carga a Sede Cascadas.</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-xs pt-space-xs">
+<button class="px-3 py-1.5 rounded text-primary font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors" type="button">Ignorar</button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors shadow-sm" type="button">Reasignar Lote</button>
+</div>
+</div>
+<!-- Alerta 2: Saturación Odontológica -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-[#FDF2F2] flex items-center justify-center text-[#C5221F] shrink-0">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-[#C5221F] uppercase tracking-wider">Saturación de Cupos</span>
+<span class="font-caption text-caption text-on-surface-variant">MINSAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-semibold mt-0.5">Odontología General: 98% de ocupación</p>
+<p class="font-caption text-caption text-on-surface-variant mt-0.5">Agenda copada para los próximos 7 días laborales en Unidades de Salud Metropolitanas.</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-xs pt-space-xs">
+<button class="px-3 py-1.5 rounded text-[#0B3D91] font-label-sm text-label-sm font-semibold hover:bg-surface-container transition-colors" type="button">Habilitar Turnos Extra</button>
+</div>
+</div>
+</section>
+<!-- Botones de Acción Rápida Ejecutiva -->
+<section class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-11 bg-[#0B3D91] hover:bg-primary text-on-primary rounded font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs shadow-md transition-all active:scale-[0.99]" onclick="triggerDownloadFeedback(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Descargar Informe Consolidado (PDF)</span>
+</button>
+<button class="w-full h-11 bg-surface-container hover:bg-surface-container-high text-[#0B3D91] rounded font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+<span>Ver Reportes Avanzados & Auditoría</span>
+</button>
+</section>
+<!-- Pie Institucional con Descargo Académico -->
+<footer class="mt-space-md p-space-md bg-surface-container-low rounded-xl flex flex-col items-center text-center gap-space-xs">
+<div class="flex items-center gap-1.5 text-[#071F4D]">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">República de El Salvador</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant max-w-sm">
+      Sistema Integrado de Gestión Pública Digital CiudadanoSV. Prototipo académico diseñado exclusivamente para fines de evaluación institucional y experiencia de usuario. Todos los datos reflejados son simulados.
+    </p>
+<div class="flex items-center gap-3 pt-1 text-on-surface-variant font-caption text-caption">
+<span>Versión 2.4.0-ACAD</span>
+<span>•</span>
+<span>Servidor Central San Salvador</span>
+</div>
+</footer>
+</div>
+<script>
+  function selectPeriod(activeBtn) {
+    const parent = document.getElementById('period-selector');
+    if (!parent) return;
+    const buttons = parent.querySelectorAll('button');
+    buttons.forEach(btn => {
+      btn.className = "flex-1 py-1.5 rounded-lg text-center font-label-sm text-label-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface";
+    });
+    activeBtn.className = "flex-1 py-1.5 rounded-lg text-center font-label-sm text-label-sm font-semibold transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm";
+  }
+
+  function triggerDownloadFeedback(btn) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Generando PDF Consolidado...</span>`;
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">download_done</span><span>¡Informe SV-2024 Descargado!</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }, 2500);
+    }, 1200);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-primary/95 backdrop-blur-xl shadow-[0_-8px_24px_rgba(0,0,0,0.12)]" data-active-classes="text-tertiary-fixed font-bold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-primary/70 hover:text-on-primary transition-colors" data-path="estadisticas-panel" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-caption text-caption">Estadísticas</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-primary/70 hover:text-on-primary transition-colors" data-path="bandeja-expedientes" href="#"><span class="material-symbols-outlined text-[22px]">inbox</span><span class="font-caption text-caption">Bandeja</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-primary/70 hover:text-on-primary transition-colors" data-path="agenda-citas" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-caption text-caption">Citas</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-primary/70 hover:text-on-primary transition-colors" data-path="ajustes-sistema" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-caption text-caption">Ajustes</span></a></div></nav></body></html>

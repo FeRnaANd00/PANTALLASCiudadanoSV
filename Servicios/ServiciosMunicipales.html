@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiudadanoSV | Servicios Municipales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { min-height: 100vh; }
+      .service-card { transition: transform .2s ease, box-shadow .2s ease; }
+      .service-card:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,40,105,.08); }
+    </style>
+  </head>
+  <body class="bg-[#f8f9ff] font-['Public_Sans'] text-[#121c2a] antialiased">
+    <header class="bg-[#002869] text-white shadow-lg">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-3xl">account_balance</span>
+          <div>
+            <p class="text-xs uppercase tracking-widest text-sky-200">Servicios ciudadanos</p>
+            <h1 class="text-xl font-bold sm:text-2xl">Servicios Municipales</h1>
+          </div>
+        </div>
+        <a href="../Index.html" class="rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold hover:bg-white/10">Volver al inicio</a>
+      </div>
+    </header>
+    <main class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <section class="mb-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+        <p class="text-sm font-semibold uppercase tracking-wider text-[#4a5d8e]">Alcaldías y registros municipales</p>
+        <h2 class="mt-2 text-2xl font-bold text-[#002869]">Trámites municipales</h2>
+        <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-600">Elige un trámite para revisar sus datos y enviar una solicitud de demostración. No hay conexión con alcaldías, cobros ni emisión de documentos reales.</p>
+      </section>
+      <div class="grid gap-4 md:grid-cols-2">
+        <article class="service-card rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-100 text-teal-700"><span class="material-symbols-outlined">verified</span></div>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">Disponible en demo</span>
+          </div>
+          <h3 class="mt-4 text-lg font-bold text-[#002869]">Solicitar solvencia municipal</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Indica el municipio y los datos del solicitante para generar una constancia de ejemplo, sin verificar ni pagar tasas.</p>
+          <a href="SolicitudMunicipal.html?tramite=solvencia" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#002869] px-4 py-3 text-sm font-semibold text-white hover:bg-[#0b3d91]">Iniciar solicitud <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+        </article>
+        <article class="service-card rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+          <div class="flex items-start justify-between gap-3">
+            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-100 text-teal-700"><span class="material-symbols-outlined">location_home</span></div>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">Disponible en demo</span>
+          </div>
+          <h3 class="mt-4 text-lg font-bold text-[#002869]">Solicitar constancia de residencia</h3>
+          <p class="mt-2 text-sm leading-6 text-slate-600">Completa domicilio y municipio para simular una solicitud de constancia de residencia.</p>
+          <a href="SolicitudMunicipal.html?tramite=residencia" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#eff4ff] px-4 py-3 text-sm font-semibold text-[#002869] hover:bg-[#e6eeff]">Iniciar solicitud <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+        </article>
+      </div>
+      <p class="mt-6 text-center text-xs text-slate-500">Usa datos ficticios. El prototipo no guarda ni envía la información.</p>
+    </main>
+  </body>
+</html>

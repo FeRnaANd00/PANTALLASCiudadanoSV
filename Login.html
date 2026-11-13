@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>CiudadanoSV</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#f8f9ff", "on-primary-container": "#8dadff", "tertiary-fixed-dim": "#68d6e9", "on-primary": "#ffffff", "outline": "#747783", "on-primary-fixed-variant": "#144296", "on-secondary": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#434652", "inverse-on-surface": "#ebf1ff", "on-tertiary-container": "#4cbdcf", "surface-dim": "#d0daed", "secondary-fixed-dim": "#b2c5fd", "tertiary": "#003138", "primary-fixed": "#dae2ff", "inverse-primary": "#b1c5ff", "tertiary-container": "#004953", "surface-container-high": "#dfe9fc", "primary": "#002869", "background": "#f8f9ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#004f59", "inverse-surface": "#27313f", "surface": "#f8f9ff", "secondary": "#4a5d8e", "on-secondary-container": "#405383", "secondary-fixed": "#dae2ff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#324575", "tertiary-fixed": "#9defff", "surface-tint": "#345baf", "on-background": "#121c2a", "surface-container-highest": "#d9e3f6", "surface-container-low": "#eff4ff", "on-primary-fixed": "#001947", "on-tertiary-fixed": "#001f24", "on-surface": "#121c2a", "on-tertiary": "#ffffff", "surface-variant": "#d9e3f6", "primary-fixed-dim": "#b1c5ff", "on-secondary-fixed": "#001947", "surface-container": "#e6eeff", "error-container": "#ffdad6", "secondary-container": "#b5c8ff", "primary-container": "#0b3d91", "outline-variant": "#c4c6d3", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-md": "1rem", "margin": "2rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["Public Sans"], "body-md": ["Public Sans"], "headline-md": ["Public Sans"], "label-md": ["Public Sans"], "headline-xl": ["\"Source Serif 4\""], "body-sm": ["Public Sans"], "title-lg": ["Public Sans"], "body-lg": ["Public Sans"], "title-sm": ["Public Sans"], "headline-xl-mobile": ["\"Source Serif 4\""], "caption": ["Public Sans"], "display-lg-mobile": ["\"Source Serif 4\""], "display-lg": ["\"Source Serif 4\"" ] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}], "title-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}], "title-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-xl-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}], "caption": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}], "display-lg-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style id="ciudadanos-clean-layout">
+    :root { color-scheme: light; }
+    html, body { min-height: 100%; }
+    body { min-height: 100vh !important; background: #f8f9ff !important; color: #121c2a; }
+    header { position: sticky !important; top: 0; background: #fff !important; box-shadow: none !important; border-bottom: 1px solid #e6eeff; }
+    header > aside { background: #eff4ff !important; color: #434652 !important; box-shadow: none !important; }
+    header > div:first-child { background: #eff4ff !important; color: #434652 !important; box-shadow: none !important; }
+    header > div { flex-wrap: wrap; }
+    header > div:nth-child(2) { height: auto !important; min-height: 64px; padding-top: 8px; padding-bottom: 8px; background: #fff !important; box-shadow: none !important; }
+    header .text-on-primary, header .text-white { color: #002869 !important; }
+    header .text-primary-fixed, header .text-primary-fixed-dim { color: #4a5d8e !important; }
+    header .bg-primary.rounded-full .text-on-primary { color: #fff !important; }
+    header .inicio-link { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 8px 14px; border: 1px solid #d9e3f6; border-radius: 8px; color: #002869; background: #fff; font-size: 14px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+    header .inicio-link:hover, header .inicio-link:focus-visible { background: #eff4ff; outline: 2px solid #345baf; outline-offset: 2px; }
+    main { min-height: 0 !important; padding-top: 24px !important; }
+    main > div:first-child { width: min(100% - 32px, 1120px); margin-left: auto; margin-right: auto; padding-left: 0 !important; padding-right: 0 !important; }
+    [class*="shadow-"] { box-shadow: none !important; }
+    [class*="rounded-"]:not([class*="rounded-full"]) { border-radius: 12px !important; }
+    .bg-gradient-to-r { background-image: none !important; background-color: #eff4ff !important; color: #121c2a !important; }
+    .bg-gradient-to-r .text-on-primary, .bg-gradient-to-r .text-primary-fixed { color: #002869 !important; }
+    @media (max-width: 480px) {
+      header .inicio-link { min-height: 38px; padding: 7px 10px; }
+      main > div:first-child { width: calc(100% - 24px); }
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen pt-safe pb-safe"><header class="citizen-site-header"><div class="h-16 px-4 sm:px-6 flex items-center justify-between gap-4"><div><span class="text-xs font-semibold uppercase tracking-wider text-secondary">Portal de Servicios Digitales</span><h1 class="text-lg font-bold text-primary">CiudadanoSV</h1></div><a class="inicio-link" href="Index.html">Inicio</a></div></header><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Persistent Academic Banner -->
+<aside class="w-full bg-[#C68A2E] text-on-primary px-gutter-mobile py-2.5 flex items-center justify-center gap-2 shadow-sm text-center">
+<span class="material-symbols-outlined text-[18px] text-[#001947]" style="font-variation-settings: 'FILL' 1;">school</span>
+<span class="font-label-sm text-label-sm text-[#001947] tracking-normal font-bold">
+      Aviso Importante: Prototipo académico, datos simulados. No ingrese información confidencial real.
+    </span>
+</aside>
+<!-- Main Hero Brand Card -->
+<section class="px-gutter-mobile pt-5 pb-3">
+<div class="w-full bg-primary rounded-xl p-5 shadow-md flex items-center justify-between text-on-primary relative overflow-hidden">
+<!-- Institutional watermark pattern -->
+<div class="absolute -right-8 -bottom-8 opacity-10 pointer-events-none select-none">
+<span class="material-symbols-outlined text-[140px]">shield</span>
+</div>
+<div class="flex items-center gap-3.5 z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center border border-white/20 shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[26px] text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-0.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-white leading-none">Ciudadano</span>
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-tertiary-fixed leading-none">SV</span>
+</div>
+<span class="font-caption text-caption uppercase tracking-wider text-[#E8AE52] font-semibold mt-1">
+            Portal de Servicios Digitales
+          </span>
+</div>
+</div>
+<div class="z-10 hidden xs:flex flex-col items-end">
+<span class="px-2 py-0.5 rounded bg-white/10 text-white/90 font-label-sm text-label-sm backdrop-blur-xs">El Salvador</span>
+<span class="text-[10px] text-white/70 font-caption tracking-wider">GOBIERNO DIGITAL</span>
+</div>
+</div>
+</section>
+<!-- Interactive Auth Container -->
+<div class="px-gutter-mobile w-full max-w-md mx-auto">
+<!-- Main Card Body -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-5 space-y-5">
+<!-- Nav Tabs -->
+<div class="flex w-full bg-surface-container-high rounded-lg p-1" role="tablist">
+<button aria-selected="true" class="flex-1 py-2.5 rounded font-label-md text-label-md transition-all duration-200 text-center font-bold bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-1.5" id="tab-login" onclick="switchTab('login')" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]">login</span>
+          Iniciar Sesión
+        </button>
+<button aria-selected="false" class="flex-1 py-2.5 rounded font-label-md text-label-md transition-all duration-200 text-center font-medium text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-1.5" id="tab-register" onclick="switchTab('register')" role="tab" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+          Registrarse
+        </button>
+</div>
+<!-- VIEW 1: INICIAR SESIÓN -->
+<div class="flex flex-col space-y-4" id="view-login">
+<!-- Identity Method Selector -->
+<div class="flex flex-col space-y-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Método de autenticación</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors bg-primary-fixed text-on-primary-fixed" id="method-dui" onclick="selectMethod('dui')" type="button">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+              DUI Digital
+            </button>
+<button class="py-2 px-3 rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="method-email" onclick="selectMethod('email')" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+              Correo Institucional
+            </button>
+</div>
+</div>
+<form class="flex flex-col space-y-4 pt-1" onsubmit="handleFormSubmit(event, 'login')">
+<!-- Identifier Input (DUI / Email) -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="login-identifier" id="identifier-label">
+                Número de DUI ficticio <span class="text-error">*</span>
+</label>
+<span class="font-caption text-caption text-secondary" id="identifier-hint">Formato: 00000000-0</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">pin</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="login-identifier" maxlength="10" oninput="formatDui(this)" placeholder="02345678-9" required="" type="text"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="login-password">
+                Contraseña <span class="text-error">*</span>
+</label>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" onclick="togglePassword('login-password', 'login-toggle-icon')" type="button">
+<span class="material-symbols-outlined text-[16px]" id="login-toggle-icon">visibility</span>
+<span id="login-toggle-text">Ver</span>
+</button>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">lock</span>
+<input class="w-full h-11 pl-10 pr-10 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="login-password" placeholder="••••••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Secondary Actions -->
+<div class="flex items-center justify-between pt-0.5">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recordar sesión</span>
+</label>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="alert('Funcionalidad de prototipo: El restablecimiento enviaría un token simulado.')" type="button">
+              ¿Olvidó su contraseña?
+            </button>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-11 bg-primary hover:bg-[#071F4D] text-on-primary rounded font-label-md text-label-md font-bold shadow transition-colors flex items-center justify-center gap-2 mt-2" type="submit">
+<span>Ingresar a CiudadanoSV</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider with subtle badge -->
+<div class="relative flex items-center justify-center my-3">
+<div class="w-full h-px bg-surface-container-highest"></div>
+<span class="absolute bg-surface-container-lowest px-3 font-caption text-caption text-on-surface-variant uppercase font-semibold">O también</span>
+</div>
+<!-- Fast Access Identidad Digital SV -->
+<button class="w-full h-12 bg-surface-container hover:bg-surface-container-high rounded font-label-md text-label-md font-semibold text-primary transition-all flex items-center justify-center gap-2 px-3 shadow-sm" onclick="triggerDigitalIdSimulation()" type="button">
+<span class="material-symbols-outlined text-primary-container text-[22px]" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+<span>Acceder con Identidad Digital SV</span>
+</button>
+</div>
+<!-- VIEW 2: REGISTRO (CONMUTABLE) -->
+<div class="hidden flex flex-col space-y-4" id="view-register">
+<div class="bg-surface-container-low p-3 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">how_to_reg</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Cree su perfil ciudadano digital simulado para realizar trámites ficticios y expedición de documentos.
+          </p>
+</div>
+<form class="flex flex-col space-y-3.5" onsubmit="handleFormSubmit(event, 'register')">
+<!-- Full Name -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="reg-fullname">
+              Nombre completo ficticio <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">person</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="reg-fullname" placeholder="Ej. Ana Beatriz Gómez Flores" required="" type="text"/>
+</div>
+</div>
+<!-- DUI Number -->
+<div class="flex flex-col space-y-1">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="reg-dui">
+                Número de DUI ficticio <span class="text-error">*</span>
+</label>
+<span class="font-caption text-caption text-secondary">00000000-0</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">badge</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="reg-dui" maxlength="10" oninput="formatDui(this)" placeholder="02345678-9" required="" type="text"/>
+</div>
+</div>
+<!-- Phone Number -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="reg-phone">
+              Teléfono de contacto ficticio <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">call</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="reg-phone" maxlength="9" oninput="formatPhone(this)" placeholder="7000-0000" required="" type="tel"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="reg-email">
+              Correo electrónico ficticio <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">mail</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="reg-email" placeholder="usuario.demo@ciudadano.sv" required="" type="email"/>
+</div>
+</div>
+<!-- Password with validation checklist -->
+<div class="flex flex-col space-y-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="reg-password">
+              Contraseña nueva <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">lock_reset</span>
+<input class="w-full h-11 pl-10 pr-3 rounded bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all placeholder:text-outline" id="reg-password" onkeyup="checkPasswordStrengths(this.value)" placeholder="Cree una contraseña segura" required="" type="password"/>
+</div>
+<!-- Validation requirements indicator -->
+<div class="pt-2 px-1 grid grid-cols-2 gap-1.5 text-secondary">
+<div class="flex items-center gap-1 font-caption text-caption" id="rule-len">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Mín. 8 caracteres</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-caption" id="rule-num">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>Al menos 1 número</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-caption" id="rule-upper">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>1 letra mayúscula</span>
+</div>
+<div class="flex items-center gap-1 font-caption text-caption" id="rule-sym">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+<span>1 símbolo (#,$,@)</span>
+</div>
+</div>
+</div>
+<!-- Academic Consent -->
+<div class="pt-1">
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input class="w-4 h-4 mt-0.5 rounded text-primary accent-primary" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                Reconozco que este es un entorno de demostración académica y acepto generar una credencial simulada.
+              </span>
+</label>
+</div>
+<!-- Submit Registration -->
+<button class="w-full h-11 bg-primary hover:bg-[#071F4D] text-on-primary rounded font-label-md text-label-md font-bold shadow transition-colors flex items-center justify-center gap-2 mt-2" type="submit">
+<span>Completar Registro Simulado</span>
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Security & Institutional Assurance Badge Footer -->
+<div class="mt-6 flex flex-col items-center justify-center text-center space-y-3 px-2">
+<!-- Status pill -->
+<div class="inline-flex items-center gap-2 bg-[#EAF5EE] text-[#107C41] px-3 py-1 rounded-full font-label-sm text-label-sm shadow-xs">
+<span class="w-2 h-2 rounded-full bg-[#107C41] animate-pulse"></span>
+<span>Conexión Simulada TLS 1.3 / Encriptación 256-bit</span>
+</div>
+<div class="flex items-center justify-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<button class="hover:underline flex items-center gap-1" onclick="alert('Aviso de Privacidad: Plataforma con fines exclusivamente pedagógicos y no gubernamentales.')" type="button">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+          Términos de Uso Prototipo
+        </button>
+<span class="text-outline-variant">•</span>
+<button class="hover:underline flex items-center gap-1" onclick="alert('Soporte simulado: En caso de requerir asistencia técnica ficticia dirigirse al aula designada.')" type="button">
+<span class="material-symbols-outlined text-[16px]">contact_support</span>
+          Mesa de Ayuda
+        </button>
+</div>
+<p class="font-caption text-caption text-secondary">
+        CiudadanoSV v2.4 • Dirección de Transformación Digital (Entorno Académico Demostrativo)
+      </p>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(tab) {
+    const loginTab = document.getElementById('tab-login');
+    const registerTab = document.getElementById('tab-register');
+    const loginView = document.getElementById('view-login');
+    const registerView = document.getElementById('view-register');
+
+    if (tab === 'login') {
+      loginTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+      loginTab.classList.remove('text-on-surface-variant', 'font-medium');
+      loginTab.setAttribute('aria-selected', 'true');
+
+      registerTab.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+      registerTab.classList.add('text-on-surface-variant', 'font-medium');
+      registerTab.setAttribute('aria-selected', 'false');
+
+      loginView.classList.remove('hidden');
+      registerView.classList.add('hidden');
+    } else {
+      registerTab.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+      registerTab.classList.remove('text-on-surface-variant', 'font-medium');
+      registerTab.setAttribute('aria-selected', 'true');
+
+      loginTab.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-bold');
+      loginTab.classList.add('text-on-surface-variant', 'font-medium');
+      loginTab.setAttribute('aria-selected', 'false');
+
+      registerView.classList.remove('hidden');
+      loginView.classList.add('hidden');
+    }
+  }
+
+  function selectMethod(method) {
+    const btnDui = document.getElementById('method-dui');
+    const btnEmail = document.getElementById('method-email');
+    const label = document.getElementById('identifier-label');
+    const input = document.getElementById('login-identifier');
+    const hint = document.getElementById('identifier-hint');
+
+    if (method === 'dui') {
+      btnDui.className = 'py-2 px-3 rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors bg-primary-fixed text-on-primary-fixed';
+      btnEmail.className = 'py-2 px-3 rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high';
+      
+      label.innerHTML = 'Número de DUI ficticio <span class="text-error">*</span>';
+      hint.innerText = 'Formato: 00000000-0';
+      input.placeholder = '02345678-9';
+      input.type = 'text';
+      input.maxLength = 10;
+      input.value = '';
+    } else {
+      btnEmail.className = 'py-2 px-3 rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors bg-primary-fixed text-on-primary-fixed';
+      btnDui.className = 'py-2 px-3 rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors bg-surface-container text-on-surface-variant hover:bg-surface-container-high';
+
+      label.innerHTML = 'Correo electrónico institucional ficticio <span class="text-error">*</span>';
+      hint.innerText = 'Formato: correo@dominio.sv';
+      input.placeholder = 'usuario@ejemplo.gob.sv';
+      input.type = 'email';
+      input.removeAttribute('maxlength');
+      input.value = '';
+    }
+  }
+
+  function formatDui(input) {
+    let value = input.value.replace(/\D/g, '');
+    if (value.length > 8) {
+      value = value.substring(0, 8) + '-' + value.substring(8, 9);
+    }
+    input.value = value.substring(0, 10);
+  }
+
+  function formatPhone(input) {
+    let value = input.value.replace(/\D/g, '');
+    if (value.length > 4) {
+      value = value.substring(0, 4) + '-' + value.substring(4, 8);
+    }
+    input.value = value.substring(0, 9);
+  }
+
+  function togglePassword(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+    const textLabel = document.getElementById('login-toggle-text');
+
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.innerText = 'visibility_off';
+      if (textLabel) textLabel.innerText = 'Ocultar';
+    } else {
+      input.type = 'password';
+      icon.innerText = 'visibility';
+      if (textLabel) textLabel.innerText = 'Ver';
+    }
+  }
+
+  function checkPasswordStrengths(pass) {
+    const lenRule = document.getElementById('rule-len');
+    const numRule = document.getElementById('rule-num');
+    const upperRule = document.getElementById('rule-upper');
+    const symRule = document.getElementById('rule-sym');
+
+    const hasLen = pass.length >= 8;
+    const hasNum = /\d/.test(pass);
+    const hasUpper = /[A-Z]/.test(pass);
+    const hasSym = /[^A-Za-z0-9]/.test(pass);
+
+    updateRuleState(lenRule, hasLen);
+    updateRuleState(numRule, hasNum);
+    updateRuleState(upperRule, hasUpper);
+    updateRuleState(symRule, hasSym);
+  }
+
+  function updateRuleState(element, valid) {
+    if (valid) {
+      element.className = 'flex items-center gap-1 font-caption text-caption text-[#107C41] font-semibold transition-colors';
+    } else {
+      element.className = 'flex items-center gap-1 font-caption text-caption text-secondary transition-colors';
+    }
+  }
+
+  function triggerDigitalIdSimulation() {
+    alert('Simulación: Autenticando mediante llave criptográfica de Identidad Digital SV con éxito. Redirigiendo a expediente ciudadano simulado...');
+  }
+
+  function handleFormSubmit(event, type) {
+    event.preventDefault();
+    if (type === 'login') {
+      alert('Autenticación simulada concedida. Accediendo al portal académico CiudadanoSV.');
+    } else {
+      alert('Registro académico simulado completado exitosamente. Ahora puede iniciar sesión con su credencial simulada.');
+      switchTab('login');
+    }
+  }
+</script></main></body></html>

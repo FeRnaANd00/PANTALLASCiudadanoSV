@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><title>CiudadanoSV</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#f8f9ff", "on-primary-container": "#8dadff", "tertiary-fixed-dim": "#68d6e9", "on-primary": "#ffffff", "outline": "#747783", "on-primary-fixed-variant": "#144296", "on-secondary": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#434652", "inverse-on-surface": "#ebf1ff", "on-tertiary-container": "#4cbdcf", "surface-dim": "#d0daed", "secondary-fixed-dim": "#b2c5fd", "tertiary": "#003138", "primary-fixed": "#dae2ff", "inverse-primary": "#b1c5ff", "tertiary-container": "#004953", "surface-container-high": "#dfe9fc", "primary": "#002869", "background": "#f8f9ff", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#004f59", "inverse-surface": "#27313f", "surface": "#f8f9ff", "secondary": "#4a5d8e", "on-secondary-container": "#405383", "secondary-fixed": "#dae2ff", "on-error": "#ffffff", "on-secondary-fixed-variant": "#324575", "tertiary-fixed": "#9defff", "surface-tint": "#345baf", "on-background": "#121c2a", "surface-container-highest": "#d9e3f6", "surface-container-low": "#eff4ff", "on-primary-fixed": "#001947", "on-tertiary-fixed": "#001f24", "on-surface": "#121c2a", "on-tertiary": "#ffffff", "surface-variant": "#d9e3f6", "primary-fixed-dim": "#b1c5ff", "on-secondary-fixed": "#001947", "surface-container": "#e6eeff", "error-container": "#ffdad6", "secondary-container": "#b5c8ff", "primary-container": "#0b3d91", "outline-variant": "#c4c6d3", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-md": "1rem", "margin": "2rem", "margin-mobile": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "label-sm": ["Public Sans"], "body-md": ["Public Sans"], "headline-md": ["Public Sans"], "label-md": ["Public Sans"], "headline-xl": ["\"Source Serif 4\""], "body-sm": ["Public Sans"], "title-lg": ["Public Sans"], "body-lg": ["Public Sans"], "title-sm": ["Public Sans"], "headline-xl-mobile": ["\"Source Serif 4\""], "caption": ["Public Sans"], "display-lg-mobile": ["\"Source Serif 4\""], "display-lg": ["\"Source Serif 4\"" ] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-md": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-xl": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400"}], "title-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}], "title-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-xl-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600"}], "caption": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}], "display-lg-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <style id="service-page-refresh">
+  body { min-height: 100vh !important; background: #f8f9ff !important; overflow-x: hidden; }
+  header.fixed { position: sticky !important; top: 0; width: 100%; padding-top: 0 !important; }
+  header.fixed > div:nth-child(2) { height: auto !important; min-height: 4rem; padding: .65rem clamp(1rem, 3vw, 2rem) !important; }
+  main { width: 100%; max-width: 60rem; margin: 0 auto; padding-top: 1rem !important; padding-bottom: 1rem !important; }
+  main .bg-surface-container-lowest { border: 1px solid #e6ecf5; box-shadow: none !important; }
+  main .bg-surface-container-low { background-color: #f4f7fc !important; }
+  main .bg-surface-container-high, main .bg-surface-container { background-color: #eef3fb !important; }
+  main .gap-space-lg { gap: 1rem !important; }
+  .home-link { min-height: 2.75rem; white-space: nowrap; }
+  @media (max-width: 639px) { .home-link span.home-label { display: none; } }
+</style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe"><div class="w-full bg-[#c68a2e] text-[#071f4d] font-label-sm text-label-sm uppercase tracking-wider py-1 text-center shadow-[0_1px_8px_rgba(0,0,0,0.04)] select-none">Prototipo Académico - Datos Simulados</div><div class="h-20 bg-primary px-gutter-mobile flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.06)]"><div class="flex items-center gap-space-xs"><button aria-label="Volver a la pantalla anterior" class="w-11 h-11 flex items-center justify-center text-on-primary hover:bg-primary-container rounded-lg" onclick="history.back()"><span class="material-symbols-outlined">arrow_back</span></button><div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-on-primary"><span class="material-symbols-outlined text-xl">account_balance</span></div><h1 class="font-title-sm text-title-sm text-on-primary font-bold ml-space-xs truncate max-w-[180px]">Detalle De Trámite</h1></div><a aria-label="Volver al inicio" class="home-link flex items-center justify-center gap-1 rounded-lg border border-white/30 px-2 text-sm font-semibold text-on-primary hover:bg-primary-container" href="../../Index.html"><span class="material-symbols-outlined">home</span><span class="home-label">Volver al inicio</span></a></div></header><main class="flex flex-col relative w-full pt-20 pb-safe bg-surface flex-grow"><div class="flex flex-col w-full pb-10 space-y-4 px-gutter-mobile">
+<!-- Feedback Toast (Copiar Folio) -->
+<div class="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-xl shadow-lg flex items-center gap-space-xs transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2" id="copy-toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm">Folio copiado al portapapeles</span>
+</div>
+<!-- Tarjeta de Resumen Superior -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md mt-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-caption text-caption uppercase text-on-surface-variant font-semibold tracking-wider">Número de Folio</span>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="font-title-lg text-title-lg text-primary font-bold tracking-tight" id="folio-val">EXP-2024-00891</span>
+<button aria-label="Copiar número de folio" class="p-1 rounded text-secondary hover:text-primary hover:bg-surface-container-high transition-colors active:scale-95" id="btn-copy-folio">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Cápsula de Estado En Revisión -->
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#fdf8ee] text-[#8a5b14] shadow-xs">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c68a2e] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#c68a2e]"></span>
+</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">pending</span>
+<span class="font-label-sm text-label-sm font-bold tracking-tight">En revisión</span>
+</div>
+</div>
+<!-- Separador sutil sin borders -->
+<div class="h-px bg-surface-container-highest w-full"></div>
+<div class="space-y-space-xs">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[17px]">badge</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide">Servicio de Documentos e Identidad</span>
+</div>
+<h2 class="font-title-sm text-title-sm text-on-surface font-bold">Renovación de DUI Ordinario</h2>
+<div class="flex items-center gap-1.5 text-on-surface-variant pt-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_today</span>
+<p class="font-body-sm text-body-sm">Radicación: <span class="font-medium text-on-surface">14 Nov 2024, 09:15 AM</span></p>
+</div>
+</div>
+</div>
+<!-- Línea de Tiempo del Seguimiento -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">timeline</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Línea de Tiempo del Trámite</h3>
+</div>
+<span class="font-caption text-caption text-secondary font-medium bg-surface-container px-2 py-0.5 rounded-full">3 de 5 pasos</span>
+</div>
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-[11px] before:top-2 before:bottom-3 before:w-0.5 before:bg-surface-container-highest">
+<!-- Paso 1 (Completado) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-0 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<div class="w-5 h-5 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">1. Solicitud Recibida</h4>
+<span class="font-caption text-caption text-on-surface-variant font-medium shrink-0">14 Nov, 09:15 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ingresada exitosamente mediante el portal ciudadano con autenticación digital segura.</p>
+</div>
+<!-- Paso 2 (Completado) -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-[27px] top-0 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<div class="w-5 h-5 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">2. Validación RNPN</h4>
+<span class="font-caption text-caption text-on-surface-variant font-medium shrink-0">14 Nov, 14:30 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validación registral aprobada en base de datos central de personas naturales sin inconsistencias.</p>
+</div>
+<!-- Paso 3 (Activo / Dorado) -->
+<div class="relative flex flex-col gap-1 bg-surface-container-low p-space-sm rounded-lg -ml-2 -mr-1">
+<div class="absolute -left-[21px] top-2.5 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<div class="w-5 h-5 rounded-full bg-[#c68a2e] text-surface-container-lowest flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[13px] animate-spin" style="animation-duration: 4s;">autorenew</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2">
+<div class="flex items-center gap-1.5">
+<h4 class="font-label-md text-label-md text-[#8a5b14] font-bold">3. En Revisión Técnica</h4>
+<span class="px-1.5 py-0.2 bg-[#fdf8ee] text-[#8a5b14] font-caption text-[10px] font-bold uppercase rounded">En curso</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant font-medium shrink-0">15 Nov, 08:20 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Expediente asignado al oficial revisor <span class="font-semibold text-primary">Lic. Douglas Morales</span> (Duicentro Galerías Escalón).</p>
+</div>
+<!-- Paso 4 (Pendiente) -->
+<div class="relative flex flex-col gap-1 opacity-70">
+<div class="absolute -left-[27px] top-0 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2">
+<h4 class="font-label-md text-label-md text-on-surface-variant font-medium">4. Programación de Cita Biométrica</h4>
+<span class="font-caption text-caption text-outline shrink-0">Próximo paso</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Captura presencial de huellas dactilares y fotografía digital biométrica.</p>
+</div>
+<!-- Paso 5 (Pendiente) -->
+<div class="relative flex flex-col gap-1 opacity-70">
+<div class="absolute -left-[27px] top-0 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-xs">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2">
+<h4 class="font-label-md text-label-md text-on-surface-variant font-medium">5. Emisión y Entrega Oficial</h4>
+<span class="font-caption text-caption text-outline shrink-0">Pendiente</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Impresión física de tarjeta de identidad y entrega de credencial renovada.</p>
+</div>
+</div>
+</div>
+<!-- Caja de Observaciones del Oficial con Sello Digital -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">rate_review</span>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface">Observaciones del Revisor</h3>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm space-y-space-xs">
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+        “El comprobante de domicilio fue verificado y cotejado correctamente. Por favor manténgase atento a la confirmación de fecha para la captura de huellas y fotografía presencial.”
+      </p>
+<!-- Sello y firma digital simulada -->
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-lowest p-space-xs rounded shadow-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-caption">
+            DM
+          </div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface font-semibold leading-none">Lic. Douglas Morales</p>
+<p class="font-caption text-caption text-on-surface-variant">Oficial Registral Delegado • SV-RNPN</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-0.5 text-primary">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span class="font-caption text-[10px] uppercase font-bold tracking-wider">Firmado Digital</span>
+</div>
+<span class="font-caption text-[9px] text-outline font-mono">ID: 884-DUI-24</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Documentos Asociados al Expediente -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">folder_open</span>
+<h3 class="font-title-sm text-title-sm font-bold text-on-surface">Documentos del Expediente</h3>
+</div>
+<span class="font-caption text-caption text-secondary font-medium">2 archivos</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Documento 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-[#ffdad6] text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">recibo_energia_octubre.pdf</span>
+<span class="font-caption text-caption text-on-surface-variant">1.2 MB • Comprobante de Residencia</span>
+</div>
+</div>
+<button aria-label="Visualizar recibo de energía" class="px-space-xs py-1 rounded text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold shrink-0" onclick="previewDoc('recibo_energia_octubre.pdf')">
+          Ver
+        </button>
+</div>
+<!-- Documento 2: Formulario con Hash -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-medium truncate">formulario_solicitud_firmado.pdf</span>
+<span class="font-caption text-caption text-on-surface-variant font-mono truncate">Hash: SHA256-8F92A0E4B3...</span>
+</div>
+</div>
+<button aria-label="Visualizar formulario firmado" class="px-space-xs py-1 rounded text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold shrink-0" onclick="previewDoc('formulario_solicitud_firmado.pdf')">
+          Ver
+        </button>
+</div>
+</div>
+</div>
+<!-- Modal / Drawer Ligero de Documento Simulado -->
+<div class="hidden fixed inset-0 z-50 bg-on-surface/40 flex items-end sm:items-center justify-center p-0 sm:p-4" id="doc-modal">
+<div class="bg-surface-container-lowest w-full max-w-sm rounded-t-2xl sm:rounded-xl p-space-md shadow-xl space-y-space-md animate-in fade-in duration-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+<h4 class="font-title-sm text-title-sm font-bold text-on-surface truncate max-w-[200px]" id="doc-modal-title">Visor Cívico</h4>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" onclick="closeDocModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low text-center space-y-2">
+<span class="material-symbols-outlined text-tertiary-container text-4xl">task_alt</span>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Documento Oficial Validado</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">El archivo cumple los requisitos de integridad electrónica del Registro Nacional de las Personas Naturales.</p>
+<div class="bg-surface-container px-3 py-1.5 rounded font-mono text-[11px] text-secondary text-left break-all">
+          Timestamp: 2024-11-14T15:30:10Z<br/>Cert: SV-RNPN-CA-G2
+        </div>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md rounded-lg font-semibold active:opacity-90" onclick="closeDocModal()">
+        Cerrar Vista Previa
+      </button>
+</div>
+</div>
+<!-- Sección de Acciones Clave -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Botón Primario: Agendar Cita -->
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container active:scale-[0.99] transition-all" id="btn-agendar-cita">
+<span class="material-symbols-outlined text-[20px]">event</span>
+      Agendar Cita Presencial para Retiro
+    </button>
+<!-- Botón Secundario: Descargar Comprobante -->
+<button class="w-full h-11 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-xs hover:bg-surface-container transition-colors" id="btn-descargar-radicacion">
+<span class="material-symbols-outlined text-[19px]">download</span>
+      Descargar comprobante de radicación (PDF)
+    </button>
+<!-- Opción de reporte o cancelación -->
+<div class="text-center pt-space-xs">
+<button class="text-error hover:text-on-error-container font-label-sm text-label-sm font-semibold inline-flex items-center gap-1 hover:underline py-1" id="btn-reportar-incidencia">
+<span class="material-symbols-outlined text-[16px]">report_problem</span>
+        Reportar inconsistencia o cancelar trámite
+      </button>
+</div>
+</div>
+<!-- Pie con disclaimer institucional -->
+<div class="text-center pt-space-sm pb-space-sm">
+<p class="font-caption text-caption text-outline">
+      Prototipo académico - Datos simulados para demostración cívica
+    </p>
+<p class="font-caption text-[10px] text-outline/80 mt-0.5">
+      República de El Salvador • Registro Nacional de las Personas Naturales (RNPN)
+    </p>
+</div>
+</div>
+<script>
+  // Copiar Folio con retroalimentación visual
+  const copyBtn = document.getElementById('btn-copy-folio');
+  const folioVal = document.getElementById('folio-val');
+  const copyToast = document.getElementById('copy-toast');
+
+  if (copyBtn && folioVal && copyToast) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(folioVal.innerText.trim()).then(() => {
+        copyToast.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
+        copyToast.classList.add('opacity-100', 'translate-y-0');
+        setTimeout(() => {
+          copyToast.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
+          copyToast.classList.remove('opacity-100', 'translate-y-0');
+        }, 2200);
+      }).catch(() => {
+        // Fallback
+        alert('Folio: ' + folioVal.innerText.trim());
+      });
+    });
+  }
+
+  // Previsualizador simulado
+  function previewDoc(docName) {
+    const modal = document.getElementById('doc-modal');
+    const modalTitle = document.getElementById('doc-modal-title');
+    if (modal && modalTitle) {
+      modalTitle.innerText = docName;
+      modal.classList.remove('hidden');
+    }
+  }
+
+  function closeDocModal() {
+    const modal = document.getElementById('doc-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+  }
+
+  // Microinteracción para agendar cita
+  const btnAgendar = document.getElementById('btn-agendar-cita');
+  if (btnAgendar) {
+    btnAgendar.addEventListener('click', () => {
+      const origText = btnAgendar.innerHTML;
+      btnAgendar.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Verificando disponibilidad de sedes...`;
+      setTimeout(() => {
+        btnAgendar.innerHTML = origText;
+        alert('Citas disponibles a partir de la fase 4: Se habilitará la agenda en Duicentro Galerías Escalón.');
+      }, 700);
+    });
+  }
+
+  // Microinteracción para descargar PDF
+  const btnDescarga = document.getElementById('btn-descargar-radicacion');
+  if (btnDescarga) {
+    btnDescarga.addEventListener('click', () => {
+      const original = btnDescarga.innerHTML;
+      btnDescarga.innerHTML = `<span class="material-symbols-outlined text-[19px] animate-bounce">downloading</span> Generando PDF seguro...`;
+      setTimeout(() => {
+        btnDescarga.innerHTML = original;
+        alert('Descarga simulada: Se ha generado el Comprobante_EXP-2024-00891.pdf con firma electrónica de recepción.');
+      }, 900);
+    });
+  }
+
+  // Confirmación de cancelación o reporte
+  const btnReportar = document.getElementById('btn-reportar-incidencia');
+  if (btnReportar) {
+    btnReportar.addEventListener('click', () => {
+      const resp = confirm('¿Desea solicitar una aclaración sobre los datos de su expediente EXP-2024-00891 o cancelar el trámite?');
+      if (resp) {
+        alert('Su solicitud de revisión ha sido notificada al oficial Lic. Douglas Morales.');
+      }
+    });
+  }
+</script></main></body></html>

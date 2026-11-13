@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiudadanoSV | Solicitud Municipal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { min-height: 100vh; }
+      .field { width: 100%; min-height: 44px; border: 1px solid #d9e3f6; border-radius: 8px; background: #fff; padding: 10px 12px; color: #121c2a; }
+      .field:focus { outline: 2px solid #345baf; outline-offset: 1px; }
+    </style>
+  </head>
+  <body class="bg-[#f8f9ff] font-['Public_Sans'] text-[#121c2a] antialiased">
+    <header class="bg-[#002869] text-white shadow-lg">
+      <div class="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-3xl">description</span>
+          <div><p class="text-xs uppercase tracking-widest text-sky-200">Solicitud simulada</p><h1 class="text-lg font-bold sm:text-xl">Trámite Municipal</h1></div>
+        </div>
+        <a href="ServiciosMunicipales.html" class="rounded-lg border border-white/30 px-3 py-2 text-sm font-semibold hover:bg-white/10">Servicios</a>
+      </div>
+    </header>
+    <main class="mx-auto max-w-4xl px-4 py-8 sm:px-6">
+      <section class="mb-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950" role="note">
+        <strong>Prototipo académico:</strong> usa datos ficticios. Esta pantalla no se conecta a ninguna alcaldía, no consulta saldos y no genera solvencias oficiales.
+      </section>
+      <section class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200 sm:p-6">
+        <div class="mb-5">
+          <p class="text-sm font-semibold uppercase tracking-wider text-[#4a5d8e]">Datos del trámite</p>
+          <h2 class="mt-1 text-2xl font-bold text-[#002869]" id="formTitle">Solicitud municipal</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-600" id="formDescription">Completa los campos para ver la confirmación simulada.</p>
+        </div>
+        <form id="municipalForm" class="space-y-4">
+          <div>
+            <label for="tramite" class="mb-1 block text-sm font-semibold">Trámite <span class="text-red-700">*</span></label>
+            <select id="tramite" name="tramite" class="field" required>
+              <option value="solvencia">Solvencia municipal</option>
+              <option value="residencia">Constancia de residencia</option>
+            </select>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="nombre" class="mb-1 block text-sm font-semibold">Nombre ficticio del solicitante <span class="text-red-700">*</span></label>
+              <input id="nombre" name="nombre" class="field" autocomplete="off" required />
+            </div>
+            <div>
+              <label for="dui" class="mb-1 block text-sm font-semibold">DUI ficticio <span class="text-red-700">*</span></label>
+              <input id="dui" name="dui" class="field" inputmode="numeric" placeholder="00000000-0" autocomplete="off" required />
+            </div>
+          </div>
+          <div>
+            <label for="municipio" class="mb-1 block text-sm font-semibold">Municipio <span class="text-red-700">*</span></label>
+            <select id="municipio" name="municipio" class="field" required>
+              <option value="">Selecciona un municipio</option>
+              <option>San Salvador Centro</option>
+              <option>La Libertad Sur</option>
+              <option>Santa Ana Centro</option>
+              <option>San Miguel Centro</option>
+            </select>
+          </div>
+          <div id="addressField" class="hidden">
+            <label for="domicilio" class="mb-1 block text-sm font-semibold">Domicilio de residencia ficticio <span class="text-red-700">*</span></label>
+            <input id="domicilio" name="domicilio" class="field" autocomplete="off" />
+          </div>
+          <label class="flex items-start gap-3 rounded-xl bg-slate-50 p-3 text-sm leading-5 text-slate-700">
+            <input id="demoConsent" type="checkbox" class="mt-1 h-4 w-4 accent-[#002869]" required />
+            <span>Confirmo que usaré información ficticia y entiendo que la solicitud no se guarda ni se envía.</span>
+          </label>
+          <button type="submit" class="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#002869] px-4 py-3 text-sm font-bold text-white hover:bg-[#0b3d91]">
+            Generar confirmación de prueba <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </button>
+        </form>
+        <section id="confirmation" class="mt-5 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-4" aria-live="polite">
+          <h3 class="font-bold text-emerald-900">Confirmación de demostración</h3>
+          <p class="mt-1 text-sm text-emerald-900">No se registró un trámite real. Folio de ejemplo: <strong id="demoFolio"></strong></p>
+        </section>
+      </section>
+      <p class="mt-5 text-center text-sm"><a class="font-semibold text-[#002869] underline" href="../Index.html">Volver al Index</a></p>
+    </main>
+    <script>
+      const tramite = document.getElementById("tramite");
+      const addressField = document.getElementById("addressField");
+      const domicilio = document.getElementById("domicilio");
+      const formTitle = document.getElementById("formTitle");
+      const formDescription = document.getElementById("formDescription");
+
+      function updateTramite() {
+        const isResidence = tramite.value === "residencia";
+        addressField.classList.toggle("hidden", !isResidence);
+        domicilio.required = isResidence;
+        formTitle.textContent = isResidence ? "Constancia de residencia" : "Solvencia municipal";
+        formDescription.textContent = isResidence
+          ? "Indica tu domicilio de ejemplo para simular la solicitud de constancia."
+          : "Indica el municipio para simular la solicitud de solvencia, sin consultas ni pagos.";
+      }
+
+      tramite.addEventListener("change", updateTramite);
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("tramite") === "residencia") {
+        tramite.value = "residencia";
+      }
+      updateTramite();
+
+      document.getElementById("municipalForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const folio = `MUN-DEMO-${Date.now().toString().slice(-6)}`;
+        document.getElementById("demoFolio").textContent = folio;
+        document.getElementById("confirmation").classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
